@@ -66,7 +66,7 @@ export default function ExperienceSection() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="p-8 bg-gray-900 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-950 transition-all duration-300"
+              className="p-8 bg-gray-950/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-950/50 transition-all duration-300"
             >
               <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
               <p className="text-gray-400 mb-3">

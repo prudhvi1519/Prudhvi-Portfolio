@@ -33,7 +33,7 @@ const projects: Project[] = [
     description: "A web-based IDE for writing, compiling, and executing Python code in real-time with a user-friendly interface.",
     impact: [
       "Enabled real-time code execution with low latency using AWS EC2.",
-      "Enhanced user experience with intuitive error feedback, reducing debugging time by 30%.",
+      "Enhanced user experience with intuitive error feedback, reducing debug time by 30%.",
       "Implemented secure code execution environments.",
     ],
     image: "/python-compiler.png",
@@ -89,7 +89,7 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-950 transition-all duration-300"
+              className="p-6 bg-gray-700/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-950/50 transition-all duration-300"
             >
               <TiltImage
                 src={proj.image}

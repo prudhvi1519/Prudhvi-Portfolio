@@ -24,48 +24,19 @@ export default function HeroSection() {
         <div className="flex space-x-4">
           <a
             href="#contact"
-            className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full overflow-hidden cursor-hover-trigger transition-transform duration-300 hover:scale-105 shadow-lg text-lg font-semibold mirror-hover"
+            className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full overflow-hidden cursor-hover-trigger transition-transform duration-300 hover:scale-105 shadow-lg text-lg font-semibold mirror-hover focus:ring-2 focus:ring-blue-500"
           >
             Connect with Me
           </a>
           <a
             href="/prudhvi_resume.pdf"
-            className="relative border-2 border-blue-500 text-blue-400 px-8 py-3 rounded-full overflow-hidden hover:text-white cursor-hover-trigger transition-all duration-300 shadow-lg text-lg font-semibold mirror-hover"
+            className="relative border-2 border-blue-500 text-blue-400 px-8 py-3 rounded-full overflow-hidden hover:text-white cursor-hover-trigger transition-all duration-300 shadow-lg text-lg font-semibold mirror-hover mirror-border focus:ring-2 focus:ring-blue-500"
             download
           >
             Download Resume
           </a>
         </div>
       </motion.div>
-
-      {/* Custom CSS for mirror-like hover effect */}
-      <style jsx>{`
-        .mirror-hover {
-          position: relative;
-          z-index: 1;
-        }
-
-        .mirror-hover::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent
-          );
-          transition: left 0.5s ease;
-          z-index: -1;
-        }
-
-        .mirror-hover:hover::before {
-          left: 100%;
-        }
-      `}</style>
     </section>
   );
 }

@@ -7,3 +7,59 @@ a:focus-visible {
   outline: 2px solid #60a5fa;
   outline-offset: 2px;
 }
+
+.mirror-hover {
+  position: relative;
+  z-index: 1;
+}
+
+.mirror-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.mirror-hover:hover::before {
+  left: 100%;
+}
+
+.mirror-border {
+  position: relative;
+}
+
+.mirror-border::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -100%;
+  width: 100%;
+  height: calc(100% + 4px);
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    rgba(173, 216, 230, 0.4), 
+    rgba(255, 182, 193, 0.3), 
+    transparent
+  );
+  transition: left 0.4s ease;
+  z-index: -2;
+  pointer-events: none;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2); 
+}
+
+.mirror-border:hover::after {
+  left: 100%;
+}

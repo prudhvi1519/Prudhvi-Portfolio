@@ -68,7 +68,7 @@ export default function Home() {
       <CustomCursor containerRef={containerRef} />
 
       {/* Navigation Bar */}
-      <nav className="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-lg z-20 shadow-lg box-border">
+      <nav className="fixed top-0 left-0 w-full bg-gray-800/50 backdrop-blur-sm z-20 shadow-lg box-border rounded-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-6 w-full">
           <div className="flex justify-between items-center h-16 w-full">
             <div className="flex items-center">
@@ -111,7 +111,7 @@ export default function Home() {
           {isMenuOpen && (
             <motion.div
               key="mobile-menu"
-              className="md:hidden bg-gray-800 bg-opacity-95 backdrop-blur-lg absolute top-16 left-0 w-full shadow-lg z-10"
+              className="md:hidden bg-gray-800 bg-opacity-90 backdrop-blur-sm absolute top-15 left-auto right-0 w-50 rounded-lg shadow-lg z-10"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
