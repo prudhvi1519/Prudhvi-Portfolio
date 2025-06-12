@@ -1,103 +1,160 @@
-import Image from "next/image";
+"use client";
+
+import { useRef, useState, useEffect } from "react";
+import CustomCursor from "./components/CustomCursor";
+import ParticlesBackground from "./components/ParticlesBackground";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import { AboutIcon, CertificationsIcon, ContactIcon, MenuBarCloseIcon, MenuBarIcon, ScrollTopIcon, SkillsIcon, ExperienceIcon, ProjectsIcon } from "./components/Icons";
+import HeroSection from "./components/sections/HeroSection";
+import AboutSection from "./components/sections/AboutSection";
+import SkillsSection from "./components/sections/SkillsSection";
+import ExperienceSection from "./components/sections/ExperienceSection";
+import ProjectsSection from "./components/sections/ProjectsSection";
+import CertificationsSection from "./components/sections/CertificationsSection";
+import LeadershipSection from "./components/sections/LeadershipSection";
+import EducationSection from "./components/sections/EducationSection";
+import ContactSection from "./components/sections/ContactSection";
+import Footer from "./components/sections/Footer";
+import { NavItem } from "./types";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const { } = useTheme();
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > window.innerHeight);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const navItems: NavItem[] = [
+    { href: "#about", label: "About", icon: <AboutIcon className="w-5 h-5 mr-1" /> },
+    { href: "#skills", label: "Skills", icon: <SkillsIcon className="w-5 h-5 mr-1" /> },
+    { href: "#experience", label: "Experience", icon: <ExperienceIcon className="w-5 h-5 mr-1" /> },
+    { href: "#projects", label: "Projects", icon: <ProjectsIcon className="w-5 h-5 mr-1" /> },
+    { href: "#certifications", label: "Certifications", icon: <CertificationsIcon className="w-5 h-5 mr-1" /> },
+    { href: "#contact", label: "Contact", icon: <ContactIcon className="w-5 h-5 mr-1" /> },
+  ];
+
+  return (
+    <div ref={containerRef} className="relative min-h-screen bg-gray-900 text-white font-sans box-border overflow-x-hidden">
+      <ParticlesBackground />
+      <CustomCursor containerRef={containerRef} />
+
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-lg z-20 shadow-lg box-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="flex justify-between items-center h-16 w-full">
+            <div className="flex items-center">
+              <h1 className="text-2xl font-bold tracking-tight text-blue-400">Prudhvi Akula</h1>
+            </div>
+            <div className="hidden md:flex items-center space-x-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md cursor-hover-trigger transition-colors duration-300"
+                  aria-label={`Navigate to ${item.label} section`}
+                >
+                  {item.icon}
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={toggleMenu}
+                className="text-gray-300 hover:text-blue-400 focus:outline-none cursor-hover-trigger"
+                aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+              >
+                {isMenuOpen ? (
+                  <MenuBarCloseIcon className="w-8 h-8" />
+                ) : (
+                  <MenuBarIcon className="w-8 h-8" />
+                )}
+              </button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              className="md:hidden bg-gray-800 bg-opacity-95 backdrop-blur-lg absolute top-16 left-0 w-full shadow-lg z-10"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <div className="flex flex-col items-center py-4 space-y-4">
+                {navItems.map((item, index) => (
+                  <motion.div
+                    key={item.href}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <Link
+                      href={item.href}
+                      className="flex items-center text-gray-300 hover:text-blue-400 px-4 py-2 rounded-md cursor-hover-trigger transition-colors duration-300 text-lg font-semibold"
+                      aria-label={`Navigate to ${item.label} section`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.icon}
+                      {item.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <CertificationsSection />
+      <LeadershipSection />
+      <EducationSection />
+      <ContactSection />
+      <Footer />
+
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 hover:scale-110 z-30"
+          aria-label="Scroll to top"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <ScrollTopIcon className="w-6 h-6" />
+        </button>
+      )}
     </div>
   );
 }
