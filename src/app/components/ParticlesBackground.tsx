@@ -52,7 +52,7 @@ export default function ParticlesBackground() {
 
         if (distance < repulsionRadius) {
           const angle = Math.atan2(dy, dx);
-          const force = (repulsionRadius - distance) / repulsionRadius * 1;
+          const force = (repulsionRadius - distance) / repulsionRadius * 0.65;
           this.vx -= Math.cos(angle) * force;
           this.vy -= Math.sin(angle) * force;
           this.trailLength = Math.min(this.trailLength + 0.1, 10); 
