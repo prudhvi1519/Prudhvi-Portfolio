@@ -23,16 +23,8 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [rotated, setRotated] = useState(false);
   const router = useRouter();
 
-   const scrollToTop = () => {
-    setRotated(true); 
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    router.push("/");
-
-    setTimeout(() => setRotated(false), 500);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,6 +33,11 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    router.push("/");
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -157,7 +154,7 @@ export default function Home() {
           className="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 hover:scale-110 z-30"
           aria-label="Scroll to top"
         >
-          <ScrollTopIcon className={`w-6 h-6 transition-transform duration-500 ${rotated ? "rotate-180" : ""}`} />
+          <ScrollTopIcon className="w-6 h-6 transition-transform duration-500" />
         </button>
       )}
     </div>

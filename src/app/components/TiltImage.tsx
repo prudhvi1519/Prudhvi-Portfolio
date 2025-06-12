@@ -42,8 +42,8 @@ export default function TiltImage({ src, alt, className }: TiltImageProps) {
       ref={tiltRef}
       src={src}
       alt={alt}
-      width={100}
-      height={100}
+      width={500}
+      height={500}
       className={`js-tilt ${className}`}
       priority={src.includes("profile-pic")}
     />
