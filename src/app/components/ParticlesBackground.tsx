@@ -37,8 +37,8 @@ export default function ParticlesBackground() {
       constructor(canvas: HTMLCanvasElement) {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 2;
-        this.vy = (Math.random() - 0.5) * 2;
+        this.vx = (Math.random() - 0.5) * 1;
+        this.vy = (Math.random() - 0.5) * 1;
         this.radius = Math.random() * 2 + 1;
         this.trailLength = 1;
       }

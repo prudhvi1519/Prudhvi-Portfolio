@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface NavItem {
   href: string;
   label: string;
@@ -16,7 +18,7 @@ export interface Project {
 export interface Certification {
   title: string;
   period: string;
-  details: string[];
+  details: string[] | ReactNode[];
   link: string;
 }
 
@@ -31,7 +33,8 @@ export interface Experience {
   title: string;
   company: string;
   period: string;
-  responsibilities: string[];
+  responsibilities: string[] | ReactNode[];
+  certificateUrl: string | null;
 }
 
 export interface Skill {

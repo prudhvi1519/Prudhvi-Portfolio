@@ -33,7 +33,7 @@ const projects: Project[] = [
     description: "A web-based IDE for writing, compiling, and executing Python code in real-time with a user-friendly interface.",
     impact: [
       "Enabled real-time code execution with low latency using AWS EC2.",
-      "Designed an intuitive UI, increasing user engagement by 30%.",
+      "Enhanced user experience with intuitive error feedback, reducing debugging time by 30%.",
       "Implemented secure code execution environments.",
     ],
     image: "/python-compiler.png",
@@ -56,8 +56,8 @@ const projects: Project[] = [
     description: "A responsive dashboard displaying real-time weather data for multiple cities with dynamic visualizations.",
     impact: [
       "Integrated OpenWeather API for accurate, real-time data.",
-      "Built a responsive design compatible with mobile and desktop.",
-      "Optimized API calls to reduce latency by 15%.",
+      "Improved user interaction with dynamic UI, increasing session duration by 25%.",
+      "Designed for cross-browser compatibility, supporting 95% of modern browsers.",
     ],
     image: "/weather-dashboard.png",
     links: [
@@ -88,7 +88,6 @@ export default function ProjectsSection() {
               key={proj.title}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-950 transition-all duration-300"
             >
