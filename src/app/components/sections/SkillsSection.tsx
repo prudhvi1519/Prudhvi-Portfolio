@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Skill } from "../../types";
+import TiltDiv from "../TiltDiv";
 
 const skills: Skill[] = [
   {
@@ -19,12 +20,12 @@ const skills: Skill[] = [
     items: ["AWS (EC2, S3, Lambda)", "Git"],
   },
   {
-    category: "Tools & Others",
-    items: ["GitHub", "VS Code", "Jira"],
-  },
-  {
     category: "Soft Skills",
     items: ["Leadership", "Problem-Solving", "Communication", "Adaptability", "Team Collaboration"],
+  },
+  {
+    category: "Tools & Others",
+    items: ["GitHub", "VS Code", "Windows", "Jira",],
   },
 ];
 
@@ -47,14 +48,17 @@ export default function SkillsSection() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-950 transition-all duration-300"
             >
+              <TiltDiv
+                className="p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-950 transition-all duration-300"
+              >
               <h3 className="text-xl font-bold mb-3 text-white">{skill.category}</h3>
               <ul className="list-disc list-inside text-gray-300">
                 {skill.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              </TiltDiv>
             </motion.div>
           ))}
         </div>

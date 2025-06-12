@@ -69,47 +69,55 @@ export default function Home() {
 
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-lg z-20 shadow-lg box-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-6 w-full">
           <div className="flex justify-between items-center h-16 w-full">
             <div className="flex items-center">
               <h1 className="text-2xl font-bold tracking-tight text-blue-400">Prudhvi Akula</h1>
             </div>
-            <div className="hidden md:flex items-center space-x-6">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md cursor-hover-trigger transition-colors duration-300"
-                  aria-label={`Navigate to ${item.label} section`}
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:flex items-center justify-end space-x-4">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-center text-gray-300 hover:text-blue-400 px-2 py-2 rounded-md cursor-hover-trigger transition-colors duration-300"
+                    aria-label={`Navigate to ${item.label} section`}
+                  >
+                    {item.icon}
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+              <div className="md:hidden flex items-center">
+                <button
+                  onClick={() => {
+                    console.log("Toggle menu clicked, isMenuOpen:", !isMenuOpen);
+                    toggleMenu();
+                  }}
+                  className="text-gray-300 hover:text-blue-400 focus:outline-none cursor-hover-trigger"
+                  aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
                 >
-                  {item.icon}
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-300 hover:text-blue-400 focus:outline-none cursor-hover-trigger"
-                aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-              >
-                {isMenuOpen ? (
-                  <MenuBarCloseIcon className="w-8 h-8" />
-                ) : (
-                  <MenuBarIcon className="w-8 h-8" />
-                )}
-              </button>
+                  {isMenuOpen ? (
+                    <MenuBarCloseIcon className="w-8 h-8" />
+                  ) : (
+                    <MenuBarIcon className="w-8 h-8" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {isMenuOpen && (
             <motion.div
+              key="mobile-menu"
               className="md:hidden bg-gray-800 bg-opacity-95 backdrop-blur-lg absolute top-16 left-0 w-full shadow-lg z-10"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
+              onAnimationStart={() => console.log("Menu animation started:", isMenuOpen ? "opening" : "closing")}
+              onAnimationComplete={() => console.log("Menu animation completed:", isMenuOpen ? "open" : "closed")}
             >
               <div className="flex flex-col items-center py-4 space-y-4">
                 {navItems.map((item, index) => (
@@ -118,13 +126,16 @@ export default function Home() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1, ease: "easeInOut" }}
                   >
                     <Link
                       href={item.href}
                       className="flex items-center text-gray-300 hover:text-blue-400 px-4 py-2 rounded-md cursor-hover-trigger transition-colors duration-300 text-lg font-semibold"
                       aria-label={`Navigate to ${item.label} section`}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+                        console.log("Nav item clicked:", item.label);
+                        setIsMenuOpen(false);
+                      }}
                     >
                       {item.icon}
                       {item.label}
