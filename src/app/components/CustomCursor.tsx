@@ -88,7 +88,8 @@ export default function CustomCursor({ containerRef }: CustomCursorProps) {
 
   // hover detection
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
     const onHover = (e: MouseEvent) => {
       const tgt = e.target as HTMLElement;
       const hoverable =
@@ -97,8 +98,8 @@ export default function CustomCursor({ containerRef }: CustomCursorProps) {
         tgt.classList.contains("cursor-hover-trigger");
       setIsHovering(hoverable);
     };
-    containerRef.current.addEventListener("mouseover", onHover);
-    return () => containerRef.current?.removeEventListener("mouseover", onHover);
+    container.addEventListener("mouseover", onHover);
+    return () => container?.removeEventListener("mouseover", onHover);
   }, [containerRef]);
 
   // hide on touch devices

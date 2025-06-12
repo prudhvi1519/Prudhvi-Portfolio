@@ -5,7 +5,7 @@ const leadership: Leadership[] = [
   {
     title: "Team Lead, Chatbot Enhancement",
     organization: "NirveonX",
-    period: "Mar 2024 - Jun 2024",
+    period: "June 2025 - Present",
     details: ["Led a team of 4 to improve chatbot response accuracy by 15%."],
   },
 ];

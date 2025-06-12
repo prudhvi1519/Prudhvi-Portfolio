@@ -4,7 +4,6 @@ import { useRef, useState, useEffect } from "react";
 import CustomCursor from "./components/CustomCursor";
 import ParticlesBackground from "./components/ParticlesBackground";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import { AboutIcon, CertificationsIcon, ContactIcon, MenuBarCloseIcon, MenuBarIcon, ScrollTopIcon, SkillsIcon, ExperienceIcon, ProjectsIcon } from "./components/Icons";
 import HeroSection from "./components/sections/HeroSection";
@@ -21,7 +20,6 @@ import { NavItem } from "./types";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const { } = useTheme();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

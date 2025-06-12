@@ -4,9 +4,15 @@ import { Education } from "../../types";
 const education: Education[] = [
   {
     degree: "B.Tech in Computer Science and Engineering",
-    period: "2019 - 2023",
+    period: "2021 - 2024",
     institution: "NSRIT, Visakhapatnam",
-    details: "Graduated with a CGPA of 8.5, focusing on software development and cloud computing.",
+    details: "Graduated with a CGPA of 7.49, focusing on software development and cloud computing.",
+  },
+  {
+    degree: "Diploma in Computer Engineering",
+    period: "2017 - 2020",
+    institution: "Andhra Polytechnic, Kakinada",
+    details: "Graduated with a Percentage of 66%, focusing on programming and web development.",
   },
 ];
 

@@ -5,7 +5,7 @@ const experiences: Experience[] = [
   {
     title: "Full-Stack Developer Intern",
     company: "NirveonX",
-    period: "Jan 2024 - Jun 2024",
+    period: "June 2025 - Present",
     responsibilities: [
       "Developed Pet-AI platform’s landing page and chatbot using React and Django.",
       "Implemented real-time communication with WebSocket, improving user engagement by 25%.",
@@ -13,7 +13,7 @@ const experiences: Experience[] = [
     ],
   },
   {
-    title: "Cloud Developer Intern",
+    title: "AWS Intern",
     company: "BrainOvision Solutions",
     period: "Jul 2023 - Dec 2023",
     responsibilities: [

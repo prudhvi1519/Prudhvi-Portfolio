@@ -8,7 +8,7 @@ const skills: Skill[] = [
   },
   {
     category: "Frameworks & Libraries",
-    items: ["React", "Next.js", "Django", "Node.js", "Tailwind CSS"],
+    items: ["React", "Next.js", "Django", "Tailwind CSS"],
   },
   {
     category: "Databases",

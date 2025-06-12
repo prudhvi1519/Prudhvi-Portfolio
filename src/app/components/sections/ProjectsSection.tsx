@@ -43,6 +43,11 @@ const projects: Project[] = [
         label: "GitHub",
         icon: <GithubIcon className="w-5 h-5 mr-1" />,
       },
+      {
+        href: "https://prudhvi-python-compiler.onrender.com/",
+        label: "Live Demo",
+        icon: <LiveDemoIcon className="w-5 h-5 mr-1" />,
+      },
     ],
   },
   {
