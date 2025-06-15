@@ -150,6 +150,8 @@ After installation, you can:
 
 ## 🤝Contributing
 
+We love contributions from the community! Please refer to our detailed [CONTRIBUTING.md](CONTRIBUTING.md) guide for steps on how to contribute to this project.  
+
 Contributions are welcome! To contribute to Prudhvi Portfolio:
 
 1. **Fork** the repository.
