@@ -142,8 +142,14 @@ Potential future integration of backend services for contact form submissions or
 
 Project Structure
 
+├── public                # Static assets (images, PDFs)
+├── src                   # Source code
+├── config files          # Tool/framework configurations
+└── README.md             # Project documentation
+
 The project is organized for modularity and maintainability, following Next.js App Router conventions:
 
+Full Directory Structure
 prudhvi-portfolio/
 ├── public/                       # Static assets (images, resume PDF)
 │   ├── profile-pic.jpg
