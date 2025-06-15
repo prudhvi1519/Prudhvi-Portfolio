@@ -8,7 +8,7 @@
 **A comprehensive Personal Portfolio** showcasing the journey of **Prudhvi Akula**, a Full-Stack Developer & Cloud Enthusiast.  
 Built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**, this site combines modern web design with interactive UI components to present skills, projects, and professional experience in a polished, responsive layout.
 
-## Table of Contents
+## 📑Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
@@ -25,7 +25,7 @@ Built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**, this si
 
 
 
-## Project Overview
+## 📝Project Overview
 
 Prudhvi Portfolio is a **Next.js** application built to highlight:
 - **About Me**: A concise personal and professional bio.
@@ -39,7 +39,7 @@ The site’s design philosophy centers on **performance**, **accessibility**, an
 
 
 
-## Key Features
+## ✨Key Features
 
 - **Interactive UI Components**: A bespoke cursor that transforms on hover and leaves a burst animation on click, enhancing interactivity. plus mirror reflective effects on "Download Resume" and "Connect Me" buttons for enhanced interactivity.
 - **Particle Background**: A canvas-powered, mouse‐responsive particle system that brings subtle motion to the hero section.
@@ -52,26 +52,26 @@ The site’s design philosophy centers on **performance**, **accessibility**, an
 - **Static Assets**: Profile picture, project images, and resume PDF served from the `public/` directory.
 
 
-## Tech Stack
+## 🛠️Tech Stack
 
-### Frameworks & Libraries:
+### 📚Frameworks & Libraries:
 - Next.js: A React-based framework for server-side rendering and static site generation.
 - React: JavaScript library for building dynamic user interfaces.
 - TypeScript: A statically typed superset of JavaScript for enhanced code reliability.
 
-### Styling & Animation:
+### 🎨Styling & Animation:
 - Tailwind CSS: Utility-first CSS framework for rapid and custom styling.
 - Framer Motion: Animation library for smooth transitions and effects.
 - Vanilla Tilt: JavaScript library for 3D tilt effects on images.
 
-### Tooling & Quality:
+### 🔧Tooling & Quality:
 - Next Themes: Theme management for dark/light mode support.
 - PostCSS: CSS transformation tool with Autoprefixer for browser compatibility.
 - ESLint: Static code analysis for maintaining code quality.
 
 
 
-## Project Structure
+## 📂Project Structure
 
 The project is organized for modularity and maintainability, following Next.js App Router conventions:
 
@@ -121,11 +121,11 @@ prudhvi-portfolio/
 
 
 
-## Installation
+## 🚀Installation
 
 Follow these steps to set up the **Prudhvi Portfolio** locally.
 
-### Prerequisites
+### ✅Prerequisites
 
 Ensure you have the following installed:
 
@@ -133,7 +133,7 @@ Ensure you have the following installed:
 - **npm**: v9 or higher (or **Yarn**, optional)
 
 
-### Steps to Set Up
+### ⚙️Steps to Set Up
 
 1. Clone the repository:
 
@@ -177,7 +177,7 @@ yarn dev
 
 
 
-## Usage & Demo
+## 🎬Usage & Demo
 
 After installation, you can:
 - Explore sections like *About*, *Skills*, *Projects*, *Contact*, etc.
@@ -188,7 +188,7 @@ After installation, you can:
 - Download the resume PDF from the Hero section.
 
 
-## Contributing
+## 🤝Contributing
 
 Contributions are welcome! To contribute to Prudhvi Portfolio:
 
@@ -201,12 +201,12 @@ Contributions are welcome! To contribute to Prudhvi Portfolio:
 Please ensure your code follows the project’s ESLint rules and TypeScript conventions. For major changes, open an issue first to discuss.
 
 
-## License
+## 📜License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for the full details.
 
 
-## Contact
+## 📬Contact
 
 - GitHub Repository: [prudhvi-portfolio](https://github.com/prudhvi1519/Prudhvi-Portfolio)
 - Issues and Feature Requests: [GitHub Issues](https://github.com/prudhvi1519/Prudhvi-Portfolio/issues)
@@ -215,4 +215,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-*Portfolio Owner*: ***Prudhvi Akula***
+*Portfolio Owner*: **_Prudhvi Akula_👤**
