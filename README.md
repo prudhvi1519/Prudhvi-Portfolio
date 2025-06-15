@@ -8,6 +8,13 @@
 **A comprehensive Personal Portfolio** showcasing the journey of **Prudhvi Akula**, a Full-Stack Developer & Cloud Enthusiast.  
 Built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**, this site combines modern web design with interactive UI components to present skills, projects, and professional experience in a polished, responsive layout.
 
+---
+
+🔗 **Live Demo:**  
+➡️ [https://prudhvi-portfolio-website.vercel.app](https://prudhvi-portfolio-website.vercel.app)
+
+---
+
 ## 📑Table of Contents
 
 - [Overview](#overview)
@@ -23,7 +30,7 @@ Built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**, this si
 - [License](#license)
 - [Contact](#contact)
 
-
+---
 
 ## 📝Project Overview
 
@@ -37,7 +44,7 @@ Prudhvi Portfolio is a **Next.js** application built to highlight:
 
 The site’s design philosophy centers on **performance**, **accessibility**, and **engagement**—with features like a custom cursor, dynamic particle background, tilt-effect cards, and dark/light mode support. Every component is fully responsive, ensuring a seamless experience on desktops, tablets, and mobile devices.
 
-
+---
 
 ## ✨Key Features
 
@@ -51,6 +58,7 @@ The site’s design philosophy centers on **performance**, **accessibility**, an
 - **Accessible Design**: ARIA labels, keyboard focus states, and semantic HTML to support all users.
 - **Static Assets**: Profile picture, project images, and resume PDF served from the `public/` directory.
 
+---
 
 ## 🛠️Tech Stack
 
@@ -69,7 +77,7 @@ The site’s design philosophy centers on **performance**, **accessibility**, an
 - PostCSS: CSS transformation tool with Autoprefixer for browser compatibility.
 - ESLint: Static code analysis for maintaining code quality.
 
-
+---
 
 ## 📂Project Structure
 
@@ -119,7 +127,7 @@ prudhvi-portfolio/
 ```
 </details>
 
-
+---
 
 ## 🚀Installation
 
@@ -135,7 +143,7 @@ Ensure you have the following installed:
 
 <ol> <li> <strong>Clone the repository:</strong> <pre> git clone https://github.com/&lt;your-username&gt;/prudhvi-portfolio.git cd prudhvi-portfolio </pre> </li> <li> <strong>Install dependencies:</strong><br /> <strong>Using npm:</strong> <pre>npm install</pre> <strong>Or using Yarn:</strong> <pre>yarn install</pre> </li> <li> <strong>Set up environment variables (if needed):</strong> <ul> <li>Create a <code>.env.local</code> file if you add backend services (e.g., for contact form APIs).</li> <li><em>No environment variables are required for the current frontend-only setup.</em></li> </ul> </li> <li> <strong>Run the development server:</strong><br /> <strong>Using npm:</strong> <pre>npm run dev</pre> <strong>Or using Yarn:</strong> <pre>yarn dev</pre> </li> <li> <strong>Open the application:</strong><br /> Visit: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> in your browser. </li> </ol>
 
-
+---
 
 ## 🎬Usage & Demo
 
@@ -147,6 +155,7 @@ After installation, you can:
 - Navigate using the **responsive menu** (mobile-friendly toggle).
 - Download the resume PDF from the Hero section.
 
+---
 
 ## 🤝Contributing
 
@@ -162,11 +171,13 @@ Contributions are welcome! To contribute to Prudhvi Portfolio:
 
 Please ensure your code follows the project’s ESLint rules and TypeScript conventions. For major changes, open an issue first to discuss.
 
+---
 
 ## 📜License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for the full details.
 
+---
 
 ## 📬Contact
 
