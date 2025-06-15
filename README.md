@@ -133,47 +133,7 @@ Ensure you have the following installed:
 - **npm**: v9 or higher (or **Yarn**, optional)
 
 
-### ⚙️Steps to Set Up
-
-1. Clone the repository:
-
-git clone https://github.com/<your-username>/prudhvi-portfolio.git
-cd prudhvi-portfolio
-
-2. Install dependencies: Using npm:
-
-npm install
-
-Or using Yarn:
-
-yarn install
-
-
-3. Set up environment variables (if needed):
-
-
-
-
-
-Create a .env.local file if you add backend services (e.g., for contact form APIs).
-
-
-
-No environment variables are required for the current frontend-only setup.
-
-
-
-4. Run the development server: Using npm:
-
-npm run dev
-
-Or using Yarn:
-
-yarn dev
-
-
-
-5. Open the application: Visit http://localhost:3000 in your browser.
+<ol> <li> <strong>Clone the repository:</strong> <pre> git clone https://github.com/&lt;your-username&gt;/prudhvi-portfolio.git cd prudhvi-portfolio </pre> </li> <li> <strong>Install dependencies:</strong><br /> <strong>Using npm:</strong> <pre>npm install</pre> <strong>Or using Yarn:</strong> <pre>yarn install</pre> </li> <li> <strong>Set up environment variables (if needed):</strong> <ul> <li>Create a <code>.env.local</code> file if you add backend services (e.g., for contact form APIs).</li> <li><em>No environment variables are required for the current frontend-only setup.</em></li> </ul> </li> <li> <strong>Run the development server:</strong><br /> <strong>Using npm:</strong> <pre>npm run dev</pre> <strong>Or using Yarn:</strong> <pre>yarn dev</pre> </li> <li> <strong>Open the application:</strong><br /> Visit: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> in your browser. </li> </ol>
 
 
 
@@ -215,4 +175,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-*Portfolio Owner*: **_Prudhvi Akula_👤**
+*Portfolio Owner*: ***Prudhvi Akula***
