@@ -1,155 +1,93 @@
-Prudhvi Portfolio
+# Prudhvi Portfolio
 
-Next.js | React | TypeScript | Tailwind CSS
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Welcome to Prudhvi Portfolio! This is a personal portfolio website showcasing the skills, projects, and experiences of Prudhvi Akula, a Full-Stack Developer and Cloud Enthusiast. The portfolio is designed to deliver a modern, interactive, and visually engaging user experience with a responsive design and dynamic features.
+**A comprehensive Personal Portfolio** showcasing the journey of **Prudhvi Akula**, a Full-Stack Developer & Cloud Enthusiast.  
+Built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**, this site combines modern web design with interactive UI components to present skills, projects, and professional experience in a polished, responsive layout.
 
-Table of Contents
+## Table of Contents
 
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+  - [Frameworks & Libraries](#frameworks-&-libraries)
+  - [Styling & Animation](#styling-&-animation)
+  - [Tooling & Quality](#tooling-&-quality)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage & Demo](#usage-&-demo)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 
 
+## Project Overview
 
-Project Overview
+Prudhvi Portfolio is a **Next.js** application built to highlight:
+- **About Me**: A concise personal and professional bio.
+- **Skills**: Detailed breakdown of languages, frameworks, and tools mastered.
+- **Projects**: Live demos, source-code links, and walkthroughs for each major project.
+- **Certifications & Education**: Academic credentials and specialized training.
+- **Leadership & Collaboration**: Team achievements, open-source contributions, and soft-skill highlights.
+- **Contact**: Direct messaging form and social links for networking.
 
+The site’s design philosophy centers on **performance**, **accessibility**, and **engagement**—with features like a custom cursor, dynamic particle background, tilt-effect cards, and dark/light mode support. Every component is fully responsive, ensuring a seamless experience on desktops, tablets, and mobile devices.
 
 
-Features
 
+## Key Features
 
+- **Interactive UI Components**: A bespoke cursor that transforms on hover and leaves a burst animation on click, enhancing interactivity. plus mirror reflective effects on "Download Resume" and "Connect Me" buttons for enhanced interactivity.
+- **Particle Background**: A canvas-powered, mouse‐responsive particle system that brings subtle motion to the hero section.
+- **Responsive Navigation**: A fixed top nav bar with smooth scrolling, animated link highlighting, and a mobile toggle menu for small screens.
+- **Portfolio Sections**: Dedicated sections for *About*, *Skills*, *Experience*, *Projects*, *Certifications*, *Leadership*, *Education*, and *Contact*.
+- **Tilt-Effect Images**: Portfolio items and images tilt in 3D when hovered, using the lightweight *vanilla-tilt* library.
+- **Dark/Light Mode Support**: Theme detection with CSS variables; toggle switch planned for next release.
+- **TypeScript Integration**: Type-safe development with interfaces defined in `types.ts` for structured data.
+- **Accessible Design**: ARIA labels, keyboard focus states, and semantic HTML to support all users.
+- **Static Assets**: Profile picture, project images, and resume PDF served from the `public/` directory.
 
-Technologies Used
 
+## Tech Stack
 
+### Frameworks & Libraries:
+- Next.js: A React-based framework for server-side rendering and static site generation.
+- React: JavaScript library for building dynamic user interfaces.
+- TypeScript: A statically typed superset of JavaScript for enhanced code reliability.
 
-Project Structure
+### Styling & Animation:
+- Tailwind CSS: Utility-first CSS framework for rapid and custom styling.
+- Framer Motion: Animation library for smooth transitions and effects.
+- Vanilla Tilt: JavaScript library for 3D tilt effects on images.
 
+### Tooling & Quality:
+- Next Themes: Theme management for dark/light mode support.
+- PostCSS: CSS transformation tool with Autoprefixer for browser compatibility.
+- ESLint: Static code analysis for maintaining code quality.
 
 
-Installation
 
+## Project Structure
 
+The project is organized for modularity and maintainability, following Next.js App Router conventions:
 
-Usage
-
-
-
-Contributing
-
-
-
-License
-
-
-
-Contact
-
-Project Overview
-
-Prudhvi Portfolio is a modern web application built to highlight Prudhvi Akula’s professional journey, including skills, projects, certifications, education, and leadership experience. The site leverages Next.js for a seamless React-based frontend, TypeScript for type safety, and Tailwind CSS for utility-first styling. It includes interactive features like a custom cursor, particle background, and tilt-effect images to enhance user engagement.
-
-The portfolio is optimized for performance and accessibility, with a responsive navigation bar, mobile-friendly design, and dark mode support.
-
-Features
-
-
-
-
-
-Interactive UI Components: Custom cursor with hover effects and click burst animations.
-
-
-
-Particle Background: A dynamic canvas-based background with mouse-responsive particles.
-
-
-
-Responsive Navigation: Fixed navigation bar with smooth scrolling and mobile menu toggle.
-
-
-
-Portfolio Sections: Dedicated sections for About, Skills, Experience, Projects, Certifications, Leadership, Education, and Contact.
-
-
-
-Tilt-Effect Images: Images with a 3D tilt effect using vanilla-tilt for visual appeal.
-
-
-
-Dark/Light Mode Support: Theme-aware particle background (toggle planned for future updates).
-
-
-
-TypeScript Integration: Type-safe development with defined interfaces for structured data.
-
-
-
-Accessible Design: ARIA labels and focus styles for improved accessibility.
-
-
-
-Static Assets: Profile picture, project images, and resume PDF served from the public/ directory.
-
-Technologies Used
-
-Frontend
-
-
-
-
-
-Next.js: A React-based framework for server-side rendering and static site generation.
-
-
-
-React: JavaScript library for building dynamic user interfaces.
-
-
-
-TypeScript: A statically typed superset of JavaScript for enhanced code reliability.
-
-
-
-Tailwind CSS: Utility-first CSS framework for rapid and custom styling.
-
-
-
-Framer Motion: Animation library for smooth transitions and effects.
-
-
-
-Vanilla Tilt: JavaScript library for 3D tilt effects on images.
-
-
-
-Next Themes: Theme management for dark/light mode support.
-
-
-
-PostCSS: CSS transformation tool with Autoprefixer for browser compatibility.
-
-
-
-ESLint: Static code analysis for maintaining code quality.
-
-Future Backend (Planned)
-
-
-
-
-
-Potential future integration of backend services for contact form submissions or API-driven content.
-
-Project Structure
-
+```bash
 ├── public                # Static assets (images, PDFs)
 ├── src                   # Source code
 ├── config files          # Tool/framework configurations
 └── README.md             # Project documentation
+```
 
-The project is organized for modularity and maintainability, following Next.js App Router conventions:
+For a more detailed breakdown of the project structure, see the full directory tree in the expanded section below.
 
-Full Directory Structure
+<details>
+<summary>Full Directory Structure (Click to Expand)</summary>
+
+```bash
 prudhvi-portfolio/
 ├── public/                       # Static assets (images, resume PDF)
 │   ├── profile-pic.jpg
@@ -178,39 +116,31 @@ prudhvi-portfolio/
 ├── tsconfig.json                 # TypeScript configuration
 ├── next-env.d.ts                 # Next.js TypeScript definitions
 └── README.md                     # Project documentation
+```
+</details>
 
-Installation
 
-Follow these steps to set up the Prudhvi Portfolio locally.
 
-Prerequisites
+## Installation
+
+Follow these steps to set up the **Prudhvi Portfolio** locally.
+
+### Prerequisites
 
 Ensure you have the following installed:
 
+- **Node.js**: v18 or higher
+- **npm**: v9 or higher (or **Yarn**, optional)
 
 
+### Steps to Set Up
 
-
-Node.js: v18 or higher
-
-
-
-npm: v9 or higher (or Yarn, optional)
-
-Steps to Set Up
-
-
-
-
-
-Clone the repository:
+1. Clone the repository:
 
 git clone https://github.com/<your-username>/prudhvi-portfolio.git
 cd prudhvi-portfolio
 
-
-
-Install dependencies: Using npm:
+2. Install dependencies: Using npm:
 
 npm install
 
@@ -219,8 +149,7 @@ Or using Yarn:
 yarn install
 
 
-
-Set up environment variables (if needed):
+3. Set up environment variables (if needed):
 
 
 
@@ -234,7 +163,7 @@ No environment variables are required for the current frontend-only setup.
 
 
 
-Run the development server: Using npm:
+4. Run the development server: Using npm:
 
 npm run dev
 
@@ -244,84 +173,46 @@ yarn dev
 
 
 
-Open the application: Visit http://localhost:3000 in your browser.
+5. Open the application: Visit http://localhost:3000 in your browser.
 
-Usage
+
+
+## Usage & Demo
 
 After installation, you can:
+- Explore sections like *About*, *Skills*, *Projects*, *Contact*, etc.
+- Experience the **Custom Cursor** with hover effects and click animations.
+- View the particle background with mouse interaction.
+- Watch images tilt in 3D on hover.
+- Navigate using the **responsive menu** (mobile-friendly toggle).
+- Download the resume PDF from the Hero section.
 
 
-
-
-
-Explore sections like About, Skills, Projects, and Contact.
-
-
-
-Experience the custom cursor with hover effects and click animations.
-
-
-
-View the particle background with mouse interaction.
-
-
-
-Navigate using the responsive menu (mobile-friendly toggle).
-
-
-
-Download the resume PDF from the relevant section (once implemented).
-
-Contributing
+## Contributing
 
 Contributions are welcome! To contribute to Prudhvi Portfolio:
 
-
-
-
-
-Fork the repository.
-
-
-
-Create a feature branch (git checkout -b feature/your-feature).
-
-
-
-Make your changes and commit (git commit -m "Add your feature").
-
-
-
-Push to the branch (git push origin feature/your-feature).
-
-
-
-Open a pull request with a clear description of your changes.
+1. **Fork** the repository.
+2. **Create a feature branch** (`git checkout -b feature/your-feature-name`).
+3. **Make your changes** and **commit** (git commit -m "Add your feature").
+4. **Push** to the branch (git push origin feature/your-feature).
+5. **Open a pull request** with a clear description of your changes.
 
 Please ensure your code follows the project’s ESLint rules and TypeScript conventions. For major changes, open an issue first to discuss.
 
-License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
 
-Contact
-
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for the full details.
 
 
+## Contact
 
+- GitHub Repository: [prudhvi-portfolio](https://github.com/prudhvi1519/Prudhvi-Portfolio)
+- Issues and Feature Requests: [GitHub Issues](https://github.com/prudhvi1519/Prudhvi-Portfolio/issues)
+- GitHub: **[prudhvi1519](https://github.com/prudhvi1519)**
+- LinkedIn: **[prudhvi1519](https://www.linkedin.com/in/prudhvi1519)**
 
-GitHub Repository: https://github.com//prudhvi-portfolio
+---
 
-
-
-Issues and Feature Requests: GitHub Issues
-
-
-
-Portfolio Owner: Prudhvi Akula
-
-
-
-LinkedIn: Prudhvi Akula (update with your actual LinkedIn URL)
-
-Built with ❤️ by Prudhvi Akula
+*Portfolio Owner*: ***Prudhvi Akula***
