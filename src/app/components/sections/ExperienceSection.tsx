@@ -60,7 +60,7 @@ export default function ExperienceSection() {
           Experience
         </motion.h2>
         <div className="space-y-8">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp) => (
             <motion.div
               key={exp.title}
               initial={{ opacity: 0, x: 50 }}
