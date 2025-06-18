@@ -46,7 +46,11 @@ export default function Home() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    router.push("/");
+
+    // Delay navigation until scroll finishes (roughly 500ms)
+    setTimeout(() => {
+      router.push("/");
+    }, 500);
   };
 
   useEffect(() => {
