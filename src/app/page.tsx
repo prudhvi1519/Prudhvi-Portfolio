@@ -5,6 +5,7 @@ import CustomCursor from "./components/CustomCursor";
 import ParticlesBackground from "./components/ParticlesBackground";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Spline from "@splinetool/react-spline";
 import {
   AboutIcon,
   CertificationsIcon,
@@ -175,6 +176,19 @@ export default function Home() {
           <ScrollTopIcon className="w-6 h-6 transition-transform duration-500" />
         </button>
       )}
+
+      {/* Spline Scene – larger canvas, hidden watermark */}
+      <div className="pointer-events-none fixed bottom-[-5px] left-0 w-60 h-60 overflow-hidden z-10 hidden md:block">
+        <Spline
+          scene="https://prod.spline.design/H047VOPvpjtdl-R0/scene.splinecode"
+          style={{
+            position: "absolute",
+            width: "290px",
+            height: "290px",
+            left: "10px"
+          }}
+        />
+      </div>
     </div>
   );
 }
