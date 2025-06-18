@@ -72,6 +72,17 @@ export default function Home() {
     { href: "#contact", label: "Contact", icon: <ContactIcon className="w-5 h-5 mr-1" /> },
   ];
 
+  // Smooth scroll helper function (optional offset for fixed navbar height)
+  const smoothScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // If you want to offset for fixed navbar height (e.g., 64px)
+      const yOffset = -64; 
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       ref={containerRef}
@@ -97,6 +108,10 @@ export default function Home() {
                   href={item.href}
                   className="mirror-hover transform transition-all duration-300 ease-in-out hover:scale-125 hover:bg-gray-800/60 flex items-center text-gray-300 hover:text-blue-400 px-3 py-2 rounded-full"
                   aria-label={`Navigate to ${item.label} section`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    smoothScrollTo(item.href.replace("#", ""));
+                  }}
                 >
                   {item.icon}
                   {item.label}
@@ -143,7 +158,11 @@ export default function Home() {
                     <Link
                       href={item.href}
                       className="flex items-center text-gray-300 hover:text-blue-400 px-4 py-2 rounded-md cursor-hover-trigger transition-colors duration-300 text-lg font-semibold"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsMenuOpen(false);
+                        smoothScrollTo(item.href.replace("#", ""));
+                      }}
                     >
                       {item.icon}
                       {item.label}
