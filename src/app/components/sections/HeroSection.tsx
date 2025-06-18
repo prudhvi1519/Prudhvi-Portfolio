@@ -2,8 +2,21 @@ import { motion } from "framer-motion";
 import TiltImage from "../TiltImage";
 
 export default function HeroSection() {
+  // Smooth scroll helper inside component
+  const smoothScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -64; // same offset as page.tsx
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-blue-900">
+    <section
+      id="hero" // add id for scroll target
+      className="min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-blue-900"
+    >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -22,15 +35,17 @@ export default function HeroSection() {
           Full-Stack Developer | Cloud Enthusiast | Crafting AI-Driven Web Solutions with Passion
         </p>
         <div className="flex space-x-4">
-          <a
-            href="#contact"
-            className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full overflow-hidden cursor-hover-trigger transition-transform duration-300 hover:scale-105 shadow-lg text-lg font-semibold mirror-hover focus:ring-2 focus:ring-blue-500"
+          <button
+            onClick={() => smoothScrollTo("contact")}
+            className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full cursor-pointer transition-transform duration-300 hover:scale-105 shadow-lg text-lg font-semibold mirror-hover focus:ring-2 focus:ring-blue-500
+              md:px-8 md:py-3 md:text-lg"
           >
             Connect with Me
-          </a>
+          </button>
           <a
             href="/prudhvi_resume.pdf"
-            className="relative border-2 border-blue-500 text-blue-400 px-8 py-3 rounded-full overflow-hidden hover:text-white cursor-hover-trigger transition-all duration-300 shadow-lg text-lg font-semibold mirror-hover mirror-border focus:ring-2 focus:ring-blue-500"
+            className="relative border-2 border-blue-500 text-blue-400 px-6 py-2 rounded-full hover:text-white cursor-pointer transition-all duration-300 shadow-lg text-lg font-semibold mirror-hover mirror-border focus:ring-2 focus:ring-blue-500
+              md:px-8 md:py-3 md:text-lg"
             download
           >
             Download Resume

@@ -100,9 +100,21 @@ export default function Home() {
         <div className="px-4 sm:px-4 lg:pl-10 lg:pr-1 w-full">
           <div className="flex items-center h-16 w-full">
             {/* Animated Name */}
-            <h1 className="text-3xl font-bold tracking-tight text-blue-400 pulse-glow">
+            <button
+              onClick={() => {
+                const element = document.getElementById("hero");
+                if (element) {
+                  const yOffset = -64;
+                  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              }}
+              className="text-3xl font-bold tracking-tight text-blue-400 pulse-glow focus:outline-none"
+              aria-label="Scroll to Hero Section"
+              type="button"
+            >
               Prudhvi Akula
-            </h1>
+            </button>
 
             {/* Desktop Nav Links */}
             <div className="hidden md:flex items-center justify-end space-x-4 ml-auto rounded-full bg-gray-900/50 backdrop-blur-sm px-4 py-1.5">
@@ -144,13 +156,13 @@ export default function Home() {
           {isMenuOpen && (
             <motion.div
               key="mobile-menu"
-              className="md:hidden bg-gray-800 bg-opacity-90 backdrop-blur-sm absolute top-16 right-0 w-50 rounded-lg shadow-lg z-10"
+              className="md:hidden bg-gray-800 bg-opacity-95 backdrop-blur-sm absolute top-16 right-0 max-w-xs rounded-lg shadow-lg z-10"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <div className="flex flex-col items-center py-4 space-y-4">
+              <div className="flex flex-col items-center py-6 space-y-4">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.href}
@@ -158,10 +170,11 @@ export default function Home() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.3, delay: index * 0.1, ease: "easeInOut" }}
+                    className="w-full"
                   >
                     <Link
                       href={item.href}
-                      className="flex items-center text-gray-300 hover:text-blue-400 px-4 py-2 rounded-md cursor-hover-trigger transition-colors duration-300 text-lg font-semibold"
+                      className="flex items-center justify-center text-gray-300 hover:text-blue-400 px-6 py-3 rounded-md cursor-pointer transition-colors duration-300 text-lg font-semibold"
                       onClick={(e) => {
                         e.preventDefault();
                         setIsMenuOpen(false);
@@ -204,12 +217,7 @@ export default function Home() {
       <div className="pointer-events-none fixed bottom-[-5px] left-0 w-60 h-60 overflow-hidden z-10 hidden md:block">
         <Spline
           scene="https://prod.spline.design/H047VOPvpjtdl-R0/scene.splinecode"
-          style={{
-            position: "absolute",
-            width: "290px",
-            height: "290px",
-            left: "10px"
-          }}
+          style={{ position: "absolute", width: "290px", height: "290px", left: "10px" }}
         />
       </div>
     </div>
