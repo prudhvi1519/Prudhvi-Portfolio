@@ -2,13 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-ubuntu: 'Ubuntu', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@layer base {
+  html, body {
+    font-family: var(--font-ubuntu) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    font-family: inherit;
+  }
+}
+
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid #60a5fa;
   outline-offset: 2px;
 }
 
-/* Mirror hover effect: container must hide overflow so gradient only shows on hover */
+/* Typing cursor animation */
+.typing-cursor::after {
+  content: "|";
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Mirror hover effect */
 .mirror-hover {
   position: relative;
   overflow: hidden;
@@ -40,7 +72,7 @@ a:focus-visible {
   opacity: 1;
 }
 
-/* Optional mirror-border for stronger outline effect */
+/* Mirror border effect */
 .mirror-border {
   position: relative;
   overflow: hidden;
@@ -71,7 +103,7 @@ a:focus-visible {
   left: 100%;
 }
 
-/* Unique animation for name */
+/* Pulse glow animation */
 .pulse-glow {
   animation: pulseGlow 3s ease-in-out infinite;
 }
@@ -80,11 +112,11 @@ a:focus-visible {
   0%, 100% {
     transform: scale(1);
     text-shadow: 0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.3);
-    color: #60a5fa; 
+    color: #60a5fa;
   }
   50% {
     transform: scale(1.05);
     text-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 25px rgba(59, 130, 246, 0.6), 0 0 40px rgba(147, 197, 253, 0.4);
-    color: #93c5fd; 
+    color: #93c5fd;
   }
 }

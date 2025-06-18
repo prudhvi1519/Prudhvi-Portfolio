@@ -69,7 +69,7 @@ export default function ContactSection() {
           className="space-y-6 max-w-xl"
         >
           <div>
-            <label className="block text-gray-300 mb-1">Name</label>
+            <label className="block text-gray-300 mb-1 cursor-none">Name</label>
             <input
               type="text"
               name="name"
@@ -82,7 +82,7 @@ export default function ContactSection() {
           </div>
 
           <div>
-            <label className="block text-gray-300 mb-1">Email</label>
+            <label className="block text-gray-300 mb-1 cursor-none">Email</label>
             <input
               type="email"
               name="email"
@@ -95,7 +95,7 @@ export default function ContactSection() {
           </div>
 
           <div>
-            <label className="block text-gray-300 mb-1">Message</label>
+            <label className="block text-gray-300 mb-1 cursor-none">Message</label>
             <textarea
               name="message"
               placeholder="Your message"
