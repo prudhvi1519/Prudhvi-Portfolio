@@ -8,8 +8,10 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+/* Mirror hover effect: container must hide overflow so gradient only shows on hover */
 .mirror-hover {
   position: relative;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -23,19 +25,25 @@ a:focus-visible {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.4),
     transparent
   );
   transition: left 0.5s ease;
+  pointer-events: none;
+  border-radius: inherit;
   z-index: -1;
+  opacity: 0;
 }
 
 .mirror-hover:hover::before {
   left: 100%;
+  opacity: 1;
 }
 
+/* Optional mirror-border for stronger outline effect */
 .mirror-border {
   position: relative;
+  overflow: hidden;
 }
 
 .mirror-border::after {
@@ -50,16 +58,33 @@ a:focus-visible {
     90deg,
     transparent,
     rgba(255, 255, 255, 0.5),
-    rgba(173, 216, 230, 0.4), 
-    rgba(255, 182, 193, 0.3), 
+    rgba(173, 216, 230, 0.4),
+    rgba(255, 182, 193, 0.3),
     transparent
   );
   transition: left 0.4s ease;
-  z-index: -2;
   pointer-events: none;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2); 
+  z-index: -2;
 }
 
 .mirror-border:hover::after {
   left: 100%;
+}
+
+/* Unique animation for name */
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.3);
+    color: #60a5fa; 
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 25px rgba(59, 130, 246, 0.6), 0 0 40px rgba(147, 197, 253, 0.4);
+    color: #93c5fd; 
+  }
 }
