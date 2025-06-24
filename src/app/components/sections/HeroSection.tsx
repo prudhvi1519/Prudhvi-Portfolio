@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import TiltImage from "../TiltImage";
+import AnimatedProfileImage from "../AnimatedProfileImage";
 import { useState, useEffect } from "react";
 
 export default function HeroSection() {
@@ -51,7 +51,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-blue-900"
+      className="min-h-screen flex items-center justify-center py-8 bg-gradient-to-b from-gray-900 via-gray-800 to-blue-900"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -59,13 +59,13 @@ export default function HeroSection() {
         transition={{ duration: 1.2 }}
         className="text-center flex flex-col items-center space-y-8"
       >
-        <TiltImage
+        <AnimatedProfileImage
           src="/profile-pic.jpg"
           alt="Prudhvi Akula"
-          className="w-48 h-48 rounded-full object-cover border-4 border-blue-500 shadow-2xl"
+          className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mt-6 sm:mt-8 md:mt-12"
         />
         <h1
-          className="text-5xl md:text-7xl font-extrabold tracking-tight text-white typing-cursor"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white typing-cursor max-w-full sm:max-w-4xl mx-auto"
         >
           {displayedText}
         </h1>
