@@ -53,34 +53,14 @@ export default function AnimatedProfileImage({ src, alt, className }: AnimatedPr
         });
     }, [innerControls, outerControls, dottedControls]);
 
-    // Hover parallax
-    const handleMouseMove = (e: React.MouseEvent) => {
-        const rect = containerRef.current?.getBoundingClientRect();
-        if (!rect) return;
-        const relX = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
-        const relY = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
-        innerControls.set({ x: relX * 5, y: relY * 5 });
-        outerControls.set({ x: relX * 10, y: relY * 10 });
-        dottedControls.set({ x: relX * 15, y: relY * 15 });
-    };
-
-    const handleMouseLeave = () => {
-        // Return to loop
-        innerControls.start({ transition: { duration: 0.5, ease: 'linear' } });
-        outerControls.start({ transition: { duration: 0.5, ease: 'linear', delay: delayStep } });
-        dottedControls.start({ transition: { duration: 0.5, ease: 'linear', delay: delayStep * 2 } });
-    };
-
     return (
         <div
             ref={containerRef}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
             className={`relative w-[250px] h-[250px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] flex items-center justify-center overflow-visible ${className}`}
         >
             {/* Inner Image Circle (top) */}
             <motion.div
-                className="absolute w-[70%] h-[70%] sm:w-[72%] sm:h-[72%] md:w-[75%] md:h-[75%] rounded-full overflow-hidden ring-4 ring-black/30 shadow-2xl z-20"
+                className="absolute w-[70%] h-[70%] sm:w-[72%] sm:h-[72%] md:w-[75%] md:h-[75%] lg:w-[80%] lg:h-[80%] rounded-full overflow-hidden ring-4 ring-black/30 shadow-[0px_30px_60px_rgba(0,0,0,0.6)] z-20"
                 animate={innerControls}
             >
                 <Image src={src} alt={alt} width={320} height={320} className="w-full h-full object-cover" priority />
@@ -88,8 +68,7 @@ export default function AnimatedProfileImage({ src, alt, className }: AnimatedPr
 
             {/* Outer Colored Circle (middle) */}
             <motion.div
-                className="absolute w-[70%] h-[70%] sm:w-[72%] sm:h-[72%] md:w-[75%] md:h-[75%] rounded-full z-10"
-                style={{ background: '#8FA0A8' }}
+                className="absolute w-[70%] h-[70%] sm:w-[72%] sm:h-[72%] md:w-[75%] md:h-[75%] lg:w-[80%] lg:h-[80%] rounded-full z-10 shadow-[0px_30px_60px_rgba(0,0,0,0.3)] bg-[#8FA0A8]"
                 animate={outerControls}
             />
 
@@ -98,7 +77,7 @@ export default function AnimatedProfileImage({ src, alt, className }: AnimatedPr
                 className="absolute inset-0 z-0 flex items-center justify-center"
                 animate={dottedControls}
             >
-                <div className="w-[70%] h-[70%] sm:w-[72%] sm:h-[72%] md:w-[75%] md:h-[75%]">
+                <div className="w-[70%] h-[70%] sm:w-[72%] sm:h-[72%] md:w-[75%] md:h-[75%] lg:w-[80%] lg:h-[80%]">
                     <svg viewBox="0 0 320 320" className="w-full h-full">
                         <circle
                             cx="160"
