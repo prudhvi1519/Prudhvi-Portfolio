@@ -96,7 +96,7 @@ export default function Home() {
       <CustomCursor containerRef={containerRef} />
 
       {/* Navigation Bar */}
-      <nav className="fixed top-0 left-0 w-full bg-gray-700/50 backdrop-blur-sm z-20 shadow-lg box-border rounded-2xl">
+      <nav className="fixed top-0 left-0 w-full bg-gray-700/50 backdrop-blur-sm z-20 shadow-lg box-border rounded-2xl z-index-30">
         <div className="px-4 sm:px-4 lg:pl-10 lg:pr-1 w-full">
           <div className="flex items-center h-16 w-full">
             {/* Animated Name */}
