@@ -5,7 +5,7 @@ const experiences: Experience[] = [
   {
     title: "Full-Stack Developer Intern",
     company: "NirveonX",
-    period: "Apr 2025 - Present",
+    period: "Apr 2025 - June 2025",
     responsibilities: [
       <>
         Spearheaded the development of the{" "}
@@ -32,7 +32,7 @@ const experiences: Experience[] = [
       "Led a team to optimize chatbot performance, resolving compatibility issues and boosting user satisfaction by 35% across browsers.",
       "Collaborated with UI/UX designers via Figma to create intuitive interfaces, enhancing user retention and interaction metrics.",
     ],
-    certificateUrl: null,
+    certificateUrl: "https://drive.google.com/file/d/1Ez8zZhUIqbrHDKXnUmpDkXBRJlEPZzpR/view?usp=sharing",
   },
   {
     title: "AWS Intern",
