@@ -60,7 +60,7 @@ export default function AnimatedProfileImage({ src, alt, className }: AnimatedPr
         >
             {/* Inner Image Circle (top) */}
             <motion.div
-                className="absolute w-[70%] h-[70%] sm:w-[72%] sm:h-[72%] md:w-[75%] md:h-[75%] lg:w-[80%] lg:h-[80%] rounded-full overflow-hidden ring-4 ring-black/30 shadow-[0px_30px_60px_rgba(0,0,0,0.6)] z-20"
+                className="absolute w-[70%] h-[70%] sm:w-[72%] sm:h-[72%] md:w-[75%] md:h-[75%] lg:w-[80%] lg:h-[80%] rounded-full overflow-hidden ring-4 ring-black/30 shadow-[0px_30px_60px_rgba(0,0,0,0.3)] z-20"
                 animate={innerControls}
             >
                 <Image src={src} alt={alt} width={320} height={320} className="w-full h-full object-cover" priority />

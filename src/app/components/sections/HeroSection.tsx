@@ -80,7 +80,7 @@ export default function HeroSection() {
             Connect with Me
           </button>
           <a
-            href="/prudhvi_resume.pdf"
+            href="/prudhvi_akula_resume.pdf"
             className="relative border-2 border-blue-500 text-blue-400 px-6 py-2 rounded-full hover:text-white transition-all duration-300 shadow-lg text-lg font-semibold mirror-hover mirror-border focus:ring-2 focus:ring-blue-500 md:px-8 md:py-3 md:text-lg"
             download
           >
