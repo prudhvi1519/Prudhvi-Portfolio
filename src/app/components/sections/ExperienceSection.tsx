@@ -3,47 +3,28 @@ import { Experience } from "../../types";
 
 const experiences: Experience[] = [
   {
-    title: "Full-Stack Developer Intern",
-    company: "NirveonX",
-    period: "Apr 2025 - June 2025",
+    title: "Full Stack Development Intern (Lead Intern)",
+    company: "Fission Infotech Pvt. Ltd.",
+    period: "Aug 2025 - Dec 2025",
     responsibilities: [
-      <>
-        Spearheaded the development of the{" "}
-        <a
-          href="https://nirveonx.com/pet-ai"
-          className="text-blue-400 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Pet-AI landing page
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://nirveonx.com/pet-ai/chat"
-          className="text-blue-400 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          chatbot interface
-        </a>{" "}
-        using React, Next.js, and Tailwind CSS, achieving a 30% increase in user engagement.
-      </>,
-      "Designed and implemented real-time audio and video call interfaces for Pet-AI, ensuring seamless cross-device compatibility and reducing latency by 25%.",
-      "Led a team to optimize chatbot performance, resolving compatibility issues and boosting user satisfaction by 35% across browsers.",
-      "Collaborated with UI/UX designers via Figma to create intuitive interfaces, enhancing user retention and interaction metrics.",
+      "Led tasks breakdown, tracking, and provided PR review support to ensure sprint-style execution.",
+      "Gained multi-codebase exposure (React/Next.js/Astro/Java/Go) contributing to sites like fission.it, neodrafts, and keens.org.",
+      "Implemented modern UI and motion using Tailwind CSS and Framer Motion for responsive components.",
+      "Demonstrated infrastructure awareness through Linux workflows, NGINX routing, DNS management, and SSL cutover checks.",
     ],
-    certificateUrl: "https://drive.google.com/file/d/1Ez8zZhUIqbrHDKXnUmpDkXBRJlEPZzpR/view?usp=sharing",
+    certificateUrl: "",
   },
   {
-    title: "AWS Intern",
-    company: "BrainOvision Solutions Pvt. Ltd.",
-    period: "Jul 2022 - Aug 2022",
+    title: "Full-Stack Developer Intern",
+    company: "NirveonX",
+    period: "Apr 2025 - Jun 2025",
     responsibilities: [
-      "Configured and deployed AWS S3 buckets and EC2 instances for high-availability applications, ensuring 30% uptime.",
-      "Optimized API performance by integrating CloudWatch monitoring, reducing response times by 15%.",
-      "Collaborated with backend teams to enhance cloud infrastructure reliability, supporting scalable deployments.",
+      "Developed UI components using Next.js and React with a focus on feature modularization and clean routing patterns.",
+      "Adopted TypeScript for safer API contracts and reduced runtime errors across the application.",
+      "Consumed REST APIs with robust request/response handling, proper status codes, and loading states.",
+      "Contributed to WebRTC audio/video basics and optimized performance through lazy-loading and bundle awareness.",
     ],
-    certificateUrl: "https://drive.google.com/file/d/1oAyPMxYpJSnSvxHq25s_-uXtJ8zYUhCq/view?usp=sharing",
+    certificateUrl: "https://drive.google.com/file/d/1Ez8zZhUIqbrHDKXnUmpDkXBRJlEPZzpR/view?usp=sharing",
   },
 ];
 
