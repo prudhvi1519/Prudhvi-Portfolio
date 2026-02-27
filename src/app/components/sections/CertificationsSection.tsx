@@ -3,12 +3,21 @@ import { Certification } from "../../types";
 
 const certifications: Certification[] = [
   {
+    title: "AWS Training Program (BrainOvision Solutions)",
+    period: "Jul 2022 - Aug 2022",
+    details: [
+      "Configured and deployed AWS S3 buckets and EC2 instances for high-availability applications.",
+      "Gained knowledge in cloud fundamentals, IAM basics, and deployment readiness.",
+      "Optimized API performance by integrating CloudWatch monitoring.",
+    ],
+    link: "https://drive.google.com/file/d/1oAyPMxYpJSnSvxHq25s_-uXtJ8zYUhCq/view?usp=sharing",
+  },
+  {
     title: "Python (Basic) (HackerRank)",
     period: "Aug 2023",
     details: [
       "Demonstrated proficiency in scalar types, operators, control flow, strings, collections, modularity, and OOP.",
       "Completed challenges to validate Python programming skills."
-    
     ],
     link: "https://www.hackerrank.com/certificates/2bc9fcc6f59d",
   },
@@ -67,7 +76,51 @@ const certifications: Certification[] = [
     ],
     link: "https://drive.google.com/file/d/1xRAPj-1DpDGUG4i4Px2nWyFlHRId25E3/view?usp=sharing",
   },
-  
+  {
+    title: "Learn Software Testing (Eduonix)",
+    period: "Completion",
+    details: [
+      "Gained foundations in manual testing, SDLC/STLC, and the QA role in delivery.",
+      "Designed test cases focusing on boundary/negative testing and defect lifecycle."
+    ],
+    link: "https://drive.google.com/file/d/1rI0fwx-ZChQqeLkhGuwGu_dw0la000V-/view?usp=drivesdk",
+  },
+  {
+    title: "Full Stack Python Programming (Python Life)",
+    period: "Completion",
+    details: [
+      "Learned Python fundamentals, Django basics, REST APIs, and MySQL integration.",
+      "Explored data analytics using NumPy, Pandas, and basic data visualization."
+    ],
+    link: "https://drive.google.com/file/d/13jlpuVKEflga_LO9TghEWMIr9YcZNUCW/view?usp=drivesdk",
+  },
+  {
+    title: "Python Certificate (Krishna Techno Services)",
+    period: "Completion",
+    details: [
+      "Reinforced core Python programming, data structures, exception handling, and scripting.",
+      "Developed algorithmic thinking and debugging workflows."
+    ],
+    link: "https://drive.google.com/file/d/1BbrdgSQIRzoGDvByOsFD9Fx_luyy4gKK/view?usp=drivesdk",
+  },
+  {
+    title: "Data Analytics & Snowflake (HMI)",
+    period: "Completion",
+    details: [
+      "Acquired SQL skills, data warehousing, and ETL/ELT thinking.",
+      "Gained exposure to Snowflake and basic reporting using Power BI and Excel."
+    ],
+    link: "https://drive.google.com/file/d/1Tu7LlkUuoBFjhwR_p8IGW62GM7Hqw9FJ/view?usp=drivesdk",
+  },
+  {
+    title: "Full Stack Web Development Using Java (HMI)",
+    period: "Completion",
+    details: [
+      "Mastered Java fundamentals, OOP, collections, and JDBC basics.",
+      "Understood backend mindsets, database interactions, and basic testing."
+    ],
+    link: "https://drive.google.com/file/d/1vJOdUc582YnREAKnMkmJAII5T3VlmXps/view?usp=drivesdk",
+  },
   {
     title: "Campus Ambassador (RINEX, IIT Bhubaneswar)",
     period: "May - June 2024",

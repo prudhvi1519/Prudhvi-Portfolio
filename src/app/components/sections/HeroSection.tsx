@@ -70,7 +70,7 @@ export default function HeroSection() {
           {displayedText}
         </h1>
         <p className="text-xl md:text-3xl max-w-3xl text-gray-200 leading-relaxed">
-          Full-Stack Developer | Cloud Enthusiast | Crafting AI-Driven Web Solutions with Passion
+          Full-Stack Developer | Cloud Enthusiast | Building Scalable Web Solutions
         </p>
         <div className="flex space-x-4">
           <button
