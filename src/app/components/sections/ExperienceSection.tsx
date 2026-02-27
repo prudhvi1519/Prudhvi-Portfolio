@@ -12,7 +12,7 @@ const experiences: Experience[] = [
       "Implemented modern UI and motion using Tailwind CSS and Framer Motion for responsive components.",
       "Demonstrated infrastructure awareness through Linux workflows, NGINX routing, DNS management, and SSL cutover checks.",
     ],
-    certificateUrl: "",
+    certificateUrl: "https://drive.google.com/file/d/1tFXTrJj2Pw8KcP1zAsU5X3QZtOUUwPPA/view?usp=drivesdk",
   },
   {
     title: "Full-Stack Developer Intern",
